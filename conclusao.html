@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Realizada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4ed0f8, #bc0cf1);
+            overflow: hidden;
+        }
+
+        .background-icons i {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.15);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .background-icons i:nth-child(1) { top: 10%; left: 15%; }
+        .background-icons i:nth-child(2) { top: 70%; left: 20%; }
+        .background-icons i:nth-child(3) { top: 30%; left: 80%; }
+        .background-icons i:nth-child(4) { top: 80%; left: 75%; }
+        .background-icons i:nth-child(5) { top: 50%; left: 50%; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .card {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: pop 0.6s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .card i {
+            font-size: 60px;
+            color: hsl(192, 80%, 67%);
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .card h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            background: hsl(197, 89%, 65%);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: hsl(281, 72%, 62%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-icons">
+        <i class="fas fa-user-graduate"></i>
+        <i class="fas fa-pencil-alt"></i>
+        <i class="fas fa-file-alt"></i>
+        <i class="fas fa-user-graduate"></i>
+        <i class="fas fa-pencil-alt"></i>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-check-circle"></i>
+        <h1>Prova realizada com sucesso!</h1>
+        <button class="btn" onclick="mostrarMensagem()">Ver detalhes</button>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            alert("Parabéns! Sua prova foi enviada corretamente.");
+        }
+    </script>
+
+</body>
+</html>
